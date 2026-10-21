@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTB Writeups</title>
+    <meta
+      name="description"
+      content="Writeups de máquinas de Hack The Box, enumeración, exploits y escalada de privilegios."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand">
+          <span class="brand-mark">HTB</span>
+          <span>Writeups</span>
+        </div>
+
+        <nav class="menu">
+          <a href="#writeups">Writeups</a>
+          <a href="#about">Sobre mí</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <p class="eyebrow">Cybersecurity • HTB • CTF</p>
+            <h1>Mis writeups de máquinas HTB</h1>
+            <p class="subtitle">
+              Documentación de máquinas, enumeración, vulnerabilidades, explotación,
+              escalada de privilegios y aprendizaje continuo.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn primary" href="#writeups">Ver writeups</a>
+              <a class="btn secondary" href="#about">Sobre mí</a>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <div class="stat">
+              <span class="label">Máquinas resueltas</span>
+              <strong>24</strong>
+            </div>
+            <div class="stat">
+              <span class="label">Dificultad</span>
+              <strong>Easy / Medium</strong>
+            </div>
+            <div class="stat">
+              <span class="label">Áreas</span>
+              <strong>Web • Linux • PrivEsc</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="writeups" class="writeups">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Biblioteca</p>
+              <h2>Últimos writeups</h2>
+            </div>
+
+            <div class="search-box">
+              <input id="searchInput" type="text" placeholder="Buscar máquina..." />
+            </div>
+          </div>
+
+          <div class="filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="easy">Easy</button>
+            <button class="filter-btn" data-filter="medium">Medium</button>
+            <button class="filter-btn" data-filter="hard">Hard</button>
+            <button class="filter-btn" data-filter="windows">Windows</button>
+            <button class="filter-btn" data-filter="linux">Linux</button>
+          </div>
+
+          <div id="machineCards" class="cards">
+            <article class="card" data-difficulty="easy" data-os="linux" data-name="Forest">
+              <div class="card-top">
+                <span class="badge easy">Easy</span>
+                <span class="badge os">Linux</span>
+              </div>
+              <h3>Forest</h3>
+              <p>Enumeración de SMB, abuso de Kerberos y escalada de privilegios.</p>
+              <ul>
+                <li>SMB</li>
+                <li>Kerberoasting</li>
+                <li>PrivEsc</li>
+              </ul>
+              <a href="#">Leer writeup →</a>
+            </article>
+
+            <article class="card" data-difficulty="medium" data-os="windows" data-name="Blue">
+              <div class="card-top">
+                <span class="badge medium">Medium</span>
+                <span class="badge os">Windows</span>
+              </div>
+              <h3>Blue</h3>
+              <p>Explotación de EternalBlue y escalada en entorno Windows Server.</p>
+              <ul>
+                <li>SMB</li>
+                <li>MS17-010</li>
+                <li>Reverse Shell</li>
+              </ul>
+              <a href="#">Leer writeup →</a>
+            </article>
+
+            <article class="card" data-difficulty="hard" data-os="linux" data-name="Legacy">
+              <div class="card-top">
+                <span class="badge hard">Hard</span>
+                <span class="badge os">Linux</span>
+              </div>
+              <h3>Legacy</h3>
+              <p>Servicio legacy, explotación y escalada con doble comprobación.</p>
+              <ul>
+                <li>RCE</li>
+                <li>Enum</li>
+                <li>Privesc</li>
+              </ul>
+              <a href="#">Leer writeup →</a>
+            </article>
+
+            <article class="card" data-difficulty="easy" data-os="linux" data-name="Nibbles">
+              <div class="card-top">
+                <span class="badge easy">Easy</span>
+                <span class="badge os">Linux</span>
+              </div>
+              <h3>Nibbles</h3>
+              <p>Descubrimiento de un servicio web, enumeración y acceso inicial.</p>
+              <ul>
+                <li>Web</li>
+                <li>RCE</li>
+                <li>PrivEsc</li>
+              </ul>
+              <a href="#">Leer writeup →</a>
+            </article>
+
+            <article class="card" data-difficulty="medium" data-os="windows" data-name="Sequel">
+              <div class="card-top">
+                <span class="badge medium">Medium</span>
+                <span class="badge os">Windows</span>
+              </div>
+              <h3>Sequel</h3>
+              <p>Enumeración de SQL Server, credenciales y abuso del servicio.</p>
+              <ul>
+                <li>MSSQL</li>
+                <li>SQL</li>
+                <li>Privileges</li>
+              </ul>
+              <a href="#">Leer writeup →</a>
+            </article>
+
+            <article class="card" data-difficulty="medium" data-os="linux" data-name="Writeup">
+              <div class="card-top">
+                <span class="badge medium">Medium</span>
+                <span class="badge os">Linux</span>
+              </div>
+              <h3>Writeup</h3>
+              <p>Otra máquina con enumeración sólida, pivote y escalada de privilegios.</p>
+              <ul>
+                <li>Web</li>
+                <li>Enum</li>
+                <li>Privesc</li>
+              </ul>
+              <a href="#">Leer writeup →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="container about-box">
+          <div>
+            <p class="eyebrow">Sobre mí</p>
+            <h2>Aprendiendo, explotando y documentando.</h2>
+          </div>
+
+          <p>
+            Este sitio recoge mis writeups de máquinas de Hack The Box. Aquí voy
+            dejando el proceso completo: enumeración, foothold, escalada de permisos
+            y conclusiones técnicas.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 HTB Writeups</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
