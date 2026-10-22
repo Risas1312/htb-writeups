@@ -1,0 +1,44 @@
+[
+  {
+    "id": "forest",
+    "title": "Forest",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "status": "Completed",
+    "summary": "Enumeración de SMB, abuso de Kerberos y escalada de privilegios.",
+    "tags": [
+      "SMB",
+      "Kerberos",
+      "PrivEsc"
+    ],
+    "content": "## Forest\n\n### Reconocimiento\n- Identificamos SMB y enumeramos usuarios.\n- Revisamos servicios expuestos.\n\n### Explotación\n- Se utiliza Kerberoasting para extraer credenciales.\n- Se realiza acceso inicial con el servicio comprometido.\n\n### PrivEsc\n- Se analizan permisos del usuario y se explota la misconfiguración de servicio.\n- Se obtiene acceso root y se valida la flag final."
+  },
+  {
+    "id": "blue",
+    "title": "Blue",
+    "difficulty": "Medium",
+    "os": "Windows",
+    "status": "Completed",
+    "summary": "Explotación de EternalBlue y escalada en entorno Windows Server.",
+    "tags": [
+      "SMB",
+      "Windows",
+      "RCE"
+    ],
+    "content": "## Blue\n\n### Reconocimiento\n- Se confirma el servicio SMB activo.\n- Se identifica la versión del sistema.\n\n### Explotación\n- Se ejecuta el exploit MS17-010.\n- Se obtiene una reverse shell.\n\n### Post-explotación\n- Enumeramos privilegios y usuarios.\n- Se termina con la escalada final y la flag."
+  },
+  {
+    "id": "legacy",
+    "title": "Legacy",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "status": "Completed",
+    "summary": "Servicio legacy, abuso de permisos y escalada final.",
+    "tags": [
+      "Legacy",
+      "RCE",
+      "Privesc"
+    ],
+    "content": "## Legacy\n\n### Enumeración\n- Se revisan servicios y puertos.\n- Se identifica una versión legacy con una vulnerabilidad explotable.\n\n### Explotación\n- Se fuerza la ejecución remota usando el vector disponible.\n- Se obtiene acceso inicial.\n\n### PrivEsc\n- Se revisan permisos y rutas del sistema.\n- Se obtiene root y se valida la flag final."
+  }
+]

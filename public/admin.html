@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Writeups Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+
+    <main class="container admin-shell">
+      <section class="admin-panel">
+        <div class="admin-header">
+          <div>
+            <span class="eyebrow">admin dashboard</span>
+            <h1>Nuevo writeup</h1>
+          </div>
+          <a class="ghost-btn" href="/">Volver al sitio</a>
+        </div>
+
+        <div class="admin-login-box">
+          <label for="adminPassword">Password de administrador</label>
+          <input id="adminPassword" type="password" placeholder="Introduce la contraseña" />
+          <button id="unlockBtn" class="primary-btn full">Entrar</button>
+        </div>
+
+        <form id="writeupForm" class="writeup-form hidden">
+          <div class="field-grid">
+            <div class="field">
+              <label for="title">Título</label>
+              <input id="title" type="text" placeholder="Forest" required />
+            </div>
+
+            <div class="field">
+              <label for="difficulty">Dificultad</label>
+              <select id="difficulty">
+                <option>Easy</option>
+                <option>Medium</option>
+                <option>Hard</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="os">Sistema</label>
+              <select id="os">
+                <option>Linux</option>
+                <option>Windows</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="status">Estado</label>
+              <select id="status">
+                <option>Completed</option>
+                <option>In Progress</option>
+                <option>Planned</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="summary">Resumen</label>
+            <textarea id="summary" rows="3" placeholder="Pequeño resumen del writeup..." required></textarea>
+          </div>
+
+          <div class="field">
+            <label for="tags">Tags</label>
+            <input id="tags" type="text" placeholder="SMB, Kerberos, PrivEsc" />
+          </div>
+
+          <div class="field">
+            <label for="content">Contenido detallado</label>
+            <textarea id="content" rows="12" placeholder="Escribe el writeup aquí...">## Título
+
+### Reconocimiento
+- Paso 1
+
+### Explotación
+- Paso 2
+
+### PrivEsc
+- Paso 3
+</textarea>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="primary-btn">Guardar writeup</button>
+            <button type="button" id="loadBtn" class="secondary-btn">Cargar entradas</button>
+          </div>
+        </form>
+
+        <div class="entries-box hidden" id="entriesBox">
+          <h2>Writeups activos</h2>
+          <ul id="entriesList"></ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="/admin.js"></script>
+  </body>
+</html>

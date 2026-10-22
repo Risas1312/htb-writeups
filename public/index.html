@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Writeups Hub</title>
+    <meta name="description" content="Portal de writeups de máquinas HTB y CTF con estilo anime-morado." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand-wrap">
+          <div class="brand-icon">W</div>
+          <div>
+            <div class="brand-name">Writeups Hub</div>
+            <div class="brand-sub">anime cyber archive</div>
+          </div>
+        </div>
+
+        <nav class="nav-links">
+          <a href="#featured">Featured</a>
+          <a href="#writeups">Writeups</a>
+          <a href="/admin">Admin</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container main-shell">
+      <section class="hero" id="featured">
+        <div class="hero-copy">
+          <span class="eyebrow">private archive // htb & ctf</span>
+          <h1>Mis máquinas resueltas, documentadas y organizadas.</h1>
+          <p>
+            Una colección personal de writeups con enfoque en enumeración, explotación,
+            escalada de privilegios y post-explotación.
+          </p>
+
+          <div class="cta-row">
+            <a href="#writeups" class="primary-btn">Ver writeups</a>
+            <a href="/admin" class="secondary-btn">Panel admin</a>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="mini-stat">
+            <span>Máquinas</span>
+            <strong id="totalMachines">0</strong>
+          </div>
+          <div class="mini-stat">
+            <span>Linux</span>
+            <strong id="linuxCount">0</strong>
+          </div>
+          <div class="mini-stat">
+            <span>Windows</span>
+            <strong id="windowsCount">0</strong>
+          </div>
+        </aside>
+      </section>
+
+      <section class="controls-panel">
+        <div class="search-box">
+          <input id="searchInput" type="text" placeholder="Buscar máquina..." />
+        </div>
+
+        <div class="filter-row">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="Easy">Easy</button>
+          <button class="filter-btn" data-filter="Medium">Medium</button>
+          <button class="filter-btn" data-filter="Hard">Hard</button>
+          <button class="filter-btn" data-filter="Linux">Linux</button>
+          <button class="filter-btn" data-filter="Windows">Windows</button>
+        </div>
+      </section>
+
+      <section id="writeups" class="cards-grid">
+        <div id="cardsContainer" class="cards-grid"></div>
+      </section>
+    </main>
+
+    <div id="writeupModal" class="modal hidden" aria-hidden="true">
+      <div class="modal-content">
+        <button id="closeModal" class="close-btn">×</button>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
